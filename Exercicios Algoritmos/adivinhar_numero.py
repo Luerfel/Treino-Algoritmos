@@ -12,6 +12,7 @@ while(acertou == 0):
     while (chave_numero_correto == 0):
         try:
             numero_jogador = int(input("Digite um Numero : "))
+            chave_numero_correto = 1
         except:
             print("Por favor digite apenas numeros!")        
     if (numero_jogador > numero_aleatorio):

@@ -1,0 +1,287 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": []
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3"
+    },
+    "language_info": {
+      "name": "python"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "metadata": {
+        "id": "0PeQv6vr_-qU"
+      },
+      "outputs": [],
+      "source": [
+        "# Exercicio 1\n",
+        "\n",
+        "senha = 1234\n",
+        "\n",
+        "# leitura da senha\n",
+        "senha_digitada = int(input(\"Digite a sua senha : \"))\n",
+        "\n",
+        "if (senha == senha_digitada) :\n",
+        "  print(\"Senha valida!\")\n",
+        "\n",
+        "else :\n",
+        "  print(\"A senha digitada esta incorreta!\")"
+      ]
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Exercicio 2\n",
+        "\n",
+        "# Leitura dos lados do triângulo\n",
+        "\n",
+        "lado1 = float(input(\"Digite o comprimento do primeiro lado\"))\n",
+        "lado2 = float(input(\"Digite o comprimento do segundo lado\"))\n",
+        "lado3 = float(input(\"Digite o comprimento do terceiro lado\"))\n",
+        "\n",
+        "# Verificando as condições\n",
+        "if (lado1 == lado2 == lado3):\n",
+        "  print(\"Você tem um triângulo equilátero!\")\n",
+        "elif (lado1==lado2 or lado2==lado3 or lado1 == lado3):\n",
+        "  print(\"você tem um triângulo isósceles!\")\n",
+        "else:\n",
+        "  print(\"Você tem um triângulo escaleno!\")"
+      ],
+      "metadata": {
+        "id": "wxB0W9HLBPA2"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Exercicio 3\n",
+        "\n",
+        "num = int(input(\"Digite um numero : \"))\n",
+        "\n",
+        "if(num % 2 == 0) :\n",
+        "  print(\"o Numero é par\")\n",
+        "else :\n",
+        "  print(\"o numero é impar\")"
+      ],
+      "metadata": {
+        "id": "WWLRzPg5SreQ"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Exercicio 4\n",
+        "\n",
+        "num1 = int (input(\"Digite o primeiro numero : \"))\n",
+        "num2 = int(input(\"Digite o segundo numero : \"))\n",
+        "if (num1%num2 != 0):\n",
+        "  print(f\"o numero {num1} não é divisível por {num2}\")\n",
+        "else :\n",
+        "  print (f\"o {num1} é divisível por {num2}\")"
+      ],
+      "metadata": {
+        "id": "knFr4L8rUJpD"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Exercicio 5\n",
+        "prova1 = float(input(\"Digite a sua nota na primeira prova\"))\n",
+        "peso1 = float(input(\"Digite o peso da primeira Prova\"))\n",
+        "prova2 = float(input(\"Digite a nota da segunda prova\"))\n",
+        "peso2 = float(input(\"Digite o peso da segunda prova\"))\n",
+        "media = ((prova1*peso1) + (prova2*peso2))/ (peso1 + peso2)\n",
+        "\n",
+        "if (media >= 9):\n",
+        "  print(\"PARABÉNS, VOCÊ FOI APROVADO COM LOUVOR\")\n",
+        "elif(media >= 8):\n",
+        "  print(\"PARABÉNS O DESEMPENHO FOI MUITO BOM\")\n",
+        "elif (media >= 5):\n",
+        "  print(\"APROVADO!\")\n",
+        "else:\n",
+        "  print(\"REPROVADO!\")"
+      ],
+      "metadata": {
+        "id": "AUxiAbB2U8Mq"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Exercicio 6 e 7\n",
+        "\n",
+        "op = int(input(\"Digite qual escala de temperatura que esta usando  \\n1 - Celsius \\n2 - Fahrenheit\\n3 - kelvin\\n4 - Rankine\\n5 - Réaumur \\ndigite a opção desejada (1,2,3,4,5) : \"))\n",
+        "temp = float(input(\"Qual é a temperatura? : \"))\n",
+        "if (op==2):\n",
+        "  temp = 5 * (temp - 32)/9\n",
+        "if (op==3):\n",
+        "  temp = temp = 273.15\n",
+        "if (op==4):\n",
+        "  temp = (temp - 491.67) / 1.8\n",
+        "if (op==5):\n",
+        "  temp = temp * (5/4)\n",
+        "\n",
+        "op = int(input(\"Digite para qual temperatura você quer converter   \\n1 - Celsius \\n2 - Fahrenheit\\n3 - kelvin\\n4 - Rankine\\n5 - Réaumur \\ndigite a opção desejada (1,2,3,4,5) : \"))\n",
+        "\n",
+        "if (op==1):\n",
+        "  print(f\"{temp:.2f} Celsius\")\n",
+        "if (op==2):\n",
+        "  temp = (temp * 9/5) + 32\n",
+        "  print(f\"{temp:.2f} Fahrenheit\")\n",
+        "if (op==3):\n",
+        "  temp = temp + 273.15\n",
+        "  print(f\"{temp:.2f} Kelvin\")\n",
+        "if (op==4):\n",
+        "  temp = (temp * 9/5) + 491.67\n",
+        "  print(f\"{temp:.2f} rankine\")\n",
+        "if (op==5):\n",
+        "  temp = temp * (4/5)\n",
+        "  print(f\"{temp:.2f} Réamur\")"
+      ],
+      "metadata": {
+        "id": "rOkqjeCCXbBR"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# exercicio 8\n",
+        "\n",
+        "ano_cons = int(input(\"Digite o ano de construção do imóvel : \"))\n",
+        "ano_atual = int(input(\"Digite o ano atual : \"))\n",
+        "idade = ano_atual - ano_cons\n",
+        "\n",
+        "if (idade < 5):\n",
+        "  print(\"você infelizmente não obteve nenhum desconto\")\n",
+        "elif(idade>=5 and idade<20):\n",
+        "  print(\"você obteve 15% de desconto !!\")\n",
+        "elif (idade>=20 and idade<40):\n",
+        "  print(\"você obteve 25% de desconto !!\")\n",
+        "elif(idade >= 40):\n",
+        "  print(\"você obteve 30% de desconto\")\n",
+        "else:\n",
+        "  print(\"ERRO\")"
+      ],
+      "metadata": {
+        "id": "crmHbpw-cgAb"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# exercicio 9\n",
+        "peso = float(input(\"Digite o seu peso\"))\n",
+        "altura =float(input(\"Digite sua altura em metros\"))\n",
+        "imc = peso / (altura**2)\n",
+        "\n",
+        "if (imc<18.5):\n",
+        "  print(\"Baixo peso\")\n",
+        "elif(imc>= 18.5 and imc<= 24.99):\n",
+        "  print(\"Normal\")\n",
+        "elif(imc>=25 and imc<=29,99):\n",
+        "  print(\"sobrepeso\")\n",
+        "else:\n",
+        "  print(\"Obesidade\")"
+      ],
+      "metadata": {
+        "id": "N9z11TnGeb3a"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# exercicio 10\n",
+        "\n",
+        "num1=int(input(\"Digite o primeiro numero : \"))\n",
+        "num2 = int(input(\"Digite o segundo numero : \"))\n",
+        "num3 = int(input(\"Digite o terceiro numero\"))\n",
+        "\n",
+        "if ( num1<=num2 and num2<=num3):\n",
+        "  print(\"os numeros estão em ordem crescente\")\n",
+        "else :\n",
+        "  print(\"os numeros não estão em ordem crescente\")"
+      ],
+      "metadata": {
+        "id": "LayfdvxQf-Hs"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Exercicio 11\n",
+        "\n",
+        "nota1 = float(input(\"Digite a nota da sua primeira prova\"))\n",
+        "nota2 = float(input(\"Digite a nota da sua segunda prova\"))\n",
+        "media = (nota1+nota2) / 2\n",
+        "freq = int (input(\"Digite de 0% a 100% a sua frequencia de presenca em sala de aula\"))\n",
+        "\n",
+        "if (freq >= 75 and media >= 4 and media < 6):\n",
+        "  print(\"EXAME!!\")\n",
+        "elif (freq >=75 and media >=6):\n",
+        "  print(\"APROVADO!!\")\n",
+        "else:\n",
+        "  print(\"Reprovado!\")\n"
+      ],
+      "metadata": {
+        "id": "3keNdp08hU6e"
+      },
+      "execution_count": null,
+      "outputs": []
+    },
+    {
+      "cell_type": "code",
+      "source": [
+        "# Exercicio 12\n",
+        "x = float(input(\"Digite o valor de X para calcular a função (4*(x*x)-3*x + 9) / x \"))\n",
+        "if (x == 0):\n",
+        "  print(\"Erro!! Divisão por zero\")\n",
+        "else:\n",
+        "  resul = (4*(x**2)-3*x +9) /x\n",
+        "  print(f\"o resultado é : {resul:.2f}\")"
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "DclcnsQOjrEa",
+        "outputId": "95b5e6a5-24f4-4408-b039-c04a41c8a98b"
+      },
+      "execution_count": 15,
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Digite o valor de X para calcular a função (4*(x*x)-3*x + 9) / x 5\n",
+            "o resultado é : 18.80\n"
+          ]
+        }
+      ]
+    }
+  ]
+}
