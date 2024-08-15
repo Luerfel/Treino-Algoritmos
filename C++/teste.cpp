@@ -1,23 +1,33 @@
 #include <iostream>
+
 using namespace std;
 
-class Carro {
-public:
-    string marca;
-    string modelo;
-    int ano;
-
-    void mostrarDetalhes() {
-        cout << "Marca: " << marca << ", Modelo: " << modelo << ", Ano: " << ano << endl;
+bool isPalindrome(int num) {
+    if (num < 0) {
+        return false; // Números negativos não são palíndromos
     }
-};
+    
+    int original = num;
+    int reversed = 0;
+    
+    while (num > 0) {
+        int digito = num % 10;
+        reversed = reversed * 10 + digito;
+        num /= 10;
+    }
+    
+    // Verificando se o número original é igual ao número invertido
+    return original == reversed;
+}
 
 int main() {
-    Carro meuCarro; // Criando um objeto da classe Carro
-    meuCarro.marca = "Toyota";
-    meuCarro.modelo = "Corolla";
-    meuCarro.ano = 2020;
-    meuCarro.mostrarDetalhes();
-
+    int num = 121;
+    
+    if (isPalindrome(num)) {
+        cout << num << " é um número palíndromo." << endl;
+    } else {
+        cout << num << " não é um número palíndromo." << endl;
+    }
+    
     return 0;
 }
