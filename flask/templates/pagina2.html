@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Meu app</title>
+  </head>
+  <body>
+    <h1 style="text-align: center;" > Cadastrar Frutas</h1>
+    <h1 style="text-align: center;" >Introdução a Tecnologias para Web!</h1>
+    <hr>
+    <form action="/processar_fruta" method="POST">
+      <input type="text" name="nome" placeholder="Digite o nome da fruta">
+      <input type="submit" value="Enviar">
+    </form>
+    <a href="{{ url_for('home_page') }}">Lista de Frutas</a>
+</body>
+</html>
